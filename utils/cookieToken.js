@@ -3,7 +3,6 @@ const cookieToken = async (user, res) => {
   const options = {
     expires: new Date(Date.now() + process.env.COOKIE_TIME),
     httpOnly: true,
-    domain: "https://task-managemnt.netlify.app",
   };
 
   user.password = undefined;
