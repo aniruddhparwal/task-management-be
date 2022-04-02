@@ -4,11 +4,11 @@ const app = express();
 var cors = require("cors");
 const cookieParser = require("cookie-parser");
 app.use(express.json());
-// var corsOptions = {
-//   origin: "https://task-managemnt.netlify.app/",
-//   optionsSuccessStatus: 200,
-// };
-// app.use(cors(corsOptions));
+var corsOptions = {
+  origin: "https://task-managemnt.netlify.app",
+  optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cookieParser());
