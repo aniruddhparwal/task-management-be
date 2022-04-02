@@ -1,8 +1,10 @@
 const express = require("express");
 require("dotenv").config();
 const app = express();
+var cors = require("cors");
 const cookieParser = require("cookie-parser");
 app.use(express.json());
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cookieParser());
