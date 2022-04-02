@@ -7,6 +7,7 @@ app.use(express.json());
 var corsOptions = {
   origin: "https://task-managemnt.netlify.app",
   optionsSuccessStatus: 200,
+  credentials: true,
 };
 app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: true }));
