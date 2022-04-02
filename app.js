@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === "production") {
     optionsSuccessStatus: 200,
     credentials: true,
   };
-  app.options("*", cors());
+  app.options("*", cors(corsOptions));
   app.use(cors(corsOptions));
 }
 app.use(express.urlencoded({ extended: true }));
