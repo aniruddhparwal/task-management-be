@@ -16,7 +16,7 @@ app.use(cookieParser());
 app.use(function (req, res, next) {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://task-managemnt.netlify.app/"
+    "https://task-managemnt.netlify.app"
   );
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, DELETE");
   res.setHeader("Access-Control-Allow-Credentials", "true");
