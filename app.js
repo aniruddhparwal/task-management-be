@@ -5,15 +5,15 @@ var cors = require("cors");
 const cookieParser = require("cookie-parser");
 app.use(express.json());
 
-if (process.env.NODE_ENV === "production") {
-  var corsOptions = {
-    origin: "https://task-managemnt.netlify.app",
-    optionsSuccessStatus: 200,
-    credentials: true,
-  };
-  app.options("*", cors(corsOptions));
-  app.use(cors(corsOptions));
-}
+// if (process.env.NODE_ENV === "production") {
+//   var corsOptions = {
+//     origin: "https://task-managemnt.netlify.app",
+//     optionsSuccessStatus: 200,
+//     credentials: true,
+//   };
+//   app.options("*", cors(corsOptions));
+//   app.use(cors(corsOptions));
+// }
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
