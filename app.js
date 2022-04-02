@@ -13,6 +13,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cookieParser());
 
+app.options("*", cors());
+
 app.use(function (req, res, next) {
   res.setHeader(
     "Access-Control-Allow-Origin",
