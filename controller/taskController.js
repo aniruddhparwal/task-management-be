@@ -30,6 +30,7 @@ exports.addTask = bigPromise(async (req, res, next) => {
     task_name,
     task_description,
     task_type,
+    task_index: 0,
     task_createdAt,
     task_user_id: req.user.id,
   });
